@@ -1,13 +1,22 @@
 package main
 
-import producerconsumer "goroutines-patterns/producer-consumer"
+import (
+	"goroutines-patterns/generator"
+	producerconsumer "goroutines-patterns/producer-consumer"
+)
 
 func main() {
-	producerConsumer()
+	generatorPattern()
 
 }
 
-func producerConsumer() {
+func generatorPattern() {
+	execute(generator.ExamplePattern{})
+
+	execute(generator.LogGenerator{})
+}
+
+func producerConsumerPattern() {
 	execute(producerconsumer.ProducerConsumerPattern{})
 
 	execute(producerconsumer.RealWorldPattern{})
