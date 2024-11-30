@@ -14,6 +14,14 @@ func generatorPattern() {
 	execute(generator.ExamplePattern{})
 
 	execute(generator.LogGenerator{})
+
+	execute(generator.EcommerceExample{})
+
+	execute(generator.DataPointGenerator{})
+
+	execute(generator.StreamGenerator{})
+
+	execute(generator.LargeSetPattern{})
 }
 
 func producerConsumerPattern() {
