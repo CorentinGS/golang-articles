@@ -11,6 +11,8 @@ func producerConsumer() {
 	execute(producerconsumer.ProducerConsumerPattern{})
 
 	execute(producerconsumer.RealWorldPattern{})
+
+	execute(producerconsumer.ProducerConsumerAdvanced{})
 }
 
 func execute(patterns Patterns) {
