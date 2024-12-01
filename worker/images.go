@@ -46,16 +46,16 @@ func (i ImageProcessor) Execute() {
 }
 
 type Job struct {
-	ID       int
 	ImageURL string
+	ID       int
 	Size     int
 }
 
 type Result struct {
-	JobID     int
-	ImageURL  string
-	NewSize   int
 	Error     error
+	ImageURL  string
+	JobID     int
+	NewSize   int
 	TimeSpent time.Duration
 }
 
