@@ -12,9 +12,11 @@ func main() {
 }
 
 func workerPoolPattern() {
-	execute(worker.PoolPattern{})
+	// execute(worker.PoolPattern{})
 
-	execute(worker.ImageProcessor{})
+	// execute(worker.ImageProcessor{})
+
+	execute(worker.SemaphoreWorker{})
 
 }
 
