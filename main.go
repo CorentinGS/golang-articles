@@ -3,10 +3,18 @@ package main
 import (
 	"goroutines-patterns/generator"
 	producerconsumer "goroutines-patterns/producer-consumer"
+	"goroutines-patterns/worker"
 )
 
 func main() {
-	generatorPattern()
+	workerPoolPattern()
+
+}
+
+func workerPoolPattern() {
+	execute(worker.PoolPattern{})
+
+	execute(worker.ImageProcessor{})
 
 }
 
