@@ -5,11 +5,9 @@ import (
 	"time"
 )
 
-type StreamGenerator struct{}
-
 type DataItem struct {
-	ID   int
 	Data string
+	ID   int
 }
 
 // mockDataStream simulates a data source (e.g., a file, queue, or network stream)
@@ -42,6 +40,8 @@ func dataGenerator(stream <-chan DataItem) <-chan string {
 	}()
 	return out
 }
+
+type StreamGenerator struct{}
 
 func (g StreamGenerator) Execute() {
 	// Create a mock data stream

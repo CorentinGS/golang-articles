@@ -5,18 +5,16 @@ import (
 	"math/rand"
 )
 
-type EcommerceExample struct{}
-
 type Product struct {
-	ID    int
 	Name  string
+	ID    int
 	Price float64
 }
 
 type Order struct {
+	Products []Product
 	ID       int
 	UserID   int
-	Products []Product
 	Total    float64
 }
 
@@ -61,6 +59,8 @@ func orderGenerator(userCount, orderPerUser int, products <-chan Product) <-chan
 	}()
 	return out
 }
+
+type EcommerceExample struct{}
 
 func (g EcommerceExample) Execute() {
 	productChan := productGenerator(1000)

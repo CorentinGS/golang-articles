@@ -2,8 +2,6 @@ package generator
 
 import "fmt"
 
-type ExamplePattern struct{}
-
 func evenGenerator(max int) <-chan int {
 	out := make(chan int)
 	go func() {
@@ -14,6 +12,8 @@ func evenGenerator(max int) <-chan int {
 	}()
 	return out
 }
+
+type ExamplePattern struct{}
 
 func (g ExamplePattern) Execute() {
 	for num := range evenGenerator(10) {
