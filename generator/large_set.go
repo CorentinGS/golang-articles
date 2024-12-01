@@ -6,8 +6,8 @@ import (
 )
 
 type SetDataItem struct {
-	ID   int
 	Data string
+	ID   int
 }
 
 // lazyDataLoader simulates loading a large dataset lazily
